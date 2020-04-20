@@ -1,0 +1,26 @@
+
+<div class="text-light bg-dark">
+<h1>
+{{titlePage}}
+</h1>
+
+<p>
+How much was the bill ? <input type ='number' #subtotal>
+</p>
+
+<p>
+What tip % will you give ? <input type ='number' #prct>
+</p>
+
+<p>  
+Number of people : <input type ='number' #nbr>
+</p>
+
+
+<button (click) = "toggleButton (subtotal.value, prct.value, nbr.value)">Calculate</button>
+
+<h3 *ngIf= "isDisplay">Total Bill : {{resulttotal}} </h3> 
+
+<h3 *ngIf= "isDisplay">Bill per person : {{resultpers}} </h3>
+
+</div>
